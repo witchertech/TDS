@@ -1,0 +1,147 @@
+2025-10-17 21:12:26,371 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.250.165.150:5000
+2025-10-17 21:12:26,371 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-17 21:13:21,012 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 21:13:21] "GET /health HTTP/1.1" 200 -
+2025-10-17 21:13:23,047 - __main__ - INFO - Received request for task: test-app-1760715801
+2025-10-17 21:13:23,047 - __main__ - INFO - Starting async processing for task: test-app-1760715801
+2025-10-17 21:13:23,047 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 21:13:23] "POST /api-endpoint HTTP/1.1" 200 -
+2025-10-17 21:13:23,047 - __main__ - INFO - Generating app code using LLM...
+2025-10-17 21:13:23,058 - llm_generator - INFO - Generating app for: test-app-1760715801
+2025-10-17 21:13:23,059 - llm_generator - ERROR - OpenAI API error: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-10-17 21:13:23,060 - __main__ - INFO - Creating GitHub repo: test-app-1760715801
+2025-10-17 21:13:23,064 - github_manager - INFO - Created temp directory: C:\Users\OM\AppData\Local\Temp\tmp38tkh_bj
+2025-10-17 21:13:24,810 - github_manager - ERROR - GitHub API error: 401 {"message": "Bad credentials", "documentation_url": "https://docs.github.com/rest", "status": "401"}
+2025-10-17 21:13:24,810 - github_manager - ERROR - Error: 401 {"message": "Bad credentials", "documentation_url": "https://docs.github.com/rest", "status": "401"}
+Traceback (most recent call last):
+  File "D:\r\TDS\github_manager.py", line 27, in create_and_push_repo
+    repo = self._create_github_repo(repo_name, task_brief)
+  File "D:\r\TDS\github_manager.py", line 52, in _create_github_repo
+    repo = self.user.create_repo(
+  File "D:\r\TDS\venv\lib\site-packages\github\AuthenticatedUser.py", line 582, in create_repo
+    headers, data = self._requester.requestJsonAndCheck("POST", "/user/repos", input=post_parameters)
+  File "D:\r\TDS\venv\lib\site-packages\github\Requester.py", line 494, in requestJsonAndCheck
+    return self.__check(*self.requestJson(verb, url, parameters, headers, input, self.__customConnection(url)))
+  File "D:\r\TDS\venv\lib\site-packages\github\Requester.py", line 525, in __check
+    raise self.createException(status, responseHeaders, data)
+github.GithubException.BadCredentialsException: 401 {"message": "Bad credentials", "documentation_url": "https://docs.github.com/rest", "status": "401"}
+2025-10-17 21:13:24,810 - __main__ - ERROR - Error in async processing: 401 {"message": "Bad credentials", "documentation_url": "https://docs.github.com/rest", "status": "401"}
+Traceback (most recent call last):
+  File "D:\r\TDS\app.py", line 129, in process_request_async
+    repo_url, commit_sha, pages_url = github_mgr.create_and_push_repo(
+  File "D:\r\TDS\github_manager.py", line 27, in create_and_push_repo
+    repo = self._create_github_repo(repo_name, task_brief)
+  File "D:\r\TDS\github_manager.py", line 52, in _create_github_repo
+    repo = self.user.create_repo(
+  File "D:\r\TDS\venv\lib\site-packages\github\AuthenticatedUser.py", line 582, in create_repo
+    headers, data = self._requester.requestJsonAndCheck("POST", "/user/repos", input=post_parameters)
+  File "D:\r\TDS\venv\lib\site-packages\github\Requester.py", line 494, in requestJsonAndCheck
+    return self.__check(*self.requestJson(verb, url, parameters, headers, input, self.__customConnection(url)))
+  File "D:\r\TDS\venv\lib\site-packages\github\Requester.py", line 525, in __check
+    raise self.createException(status, responseHeaders, data)
+github.GithubException.BadCredentialsException: 401 {"message": "Bad credentials", "documentation_url": "https://docs.github.com/rest", "status": "401"}
+2025-10-17 21:18:22,334 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.250.165.150:5000
+2025-10-17 21:18:22,335 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-17 21:18:35,818 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 21:18:35] "GET /health HTTP/1.1" 200 -
+2025-10-17 21:18:37,858 - __main__ - INFO - Received request for task: test-app-1760716115
+2025-10-17 21:18:37,858 - __main__ - INFO - Starting async processing for task: test-app-1760716115
+2025-10-17 21:18:37,858 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 21:18:37] "POST /api-endpoint HTTP/1.1" 200 -
+2025-10-17 21:18:37,858 - __main__ - INFO - Generating app code using LLM...
+2025-10-17 21:18:37,858 - llm_generator - INFO - Generating app for: test-app-1760716115
+2025-10-17 21:18:37,858 - llm_generator - ERROR - OpenAI API error: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-10-17 21:18:37,858 - __main__ - INFO - Creating GitHub repo: test-app-1760716115
+2025-10-17 21:18:37,866 - github_manager - INFO - Created temp directory: C:\Users\OM\AppData\Local\Temp\tmp3ofptsps
+2025-10-17 21:18:46,017 - github_manager - ERROR - Error: 'Repository' object has no attribute 'create_pages_site'
+Traceback (most recent call last):
+  File "D:\r\TDS\github_manager.py", line 33, in create_and_push_repo
+    pages_url = self._enable_github_pages(repo)
+  File "D:\r\TDS\github_manager.py", line 147, in _enable_github_pages
+    repo.create_pages_site(source={'branch': self.config.DEFAULT_BRANCH, 'path': '/'})
+AttributeError: 'Repository' object has no attribute 'create_pages_site'
+2025-10-17 21:18:46,019 - __main__ - ERROR - Error in async processing: 'Repository' object has no attribute 'create_pages_site'
+Traceback (most recent call last):
+  File "D:\r\TDS\app.py", line 129, in process_request_async
+    repo_url, commit_sha, pages_url = github_mgr.create_and_push_repo(
+  File "D:\r\TDS\github_manager.py", line 33, in create_and_push_repo
+    pages_url = self._enable_github_pages(repo)
+  File "D:\r\TDS\github_manager.py", line 147, in _enable_github_pages
+    repo.create_pages_site(source={'branch': self.config.DEFAULT_BRANCH, 'path': '/'})
+AttributeError: 'Repository' object has no attribute 'create_pages_site'
+2025-10-17 21:26:50,404 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.250.165.150:5000
+2025-10-17 21:26:50,404 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-17 21:27:03,666 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 21:27:03] "GET /health HTTP/1.1" 200 -
+2025-10-17 21:27:05,716 - __main__ - INFO - Received request for task: test-app-1760716623
+2025-10-17 21:27:05,716 - __main__ - INFO - Starting async processing for task: test-app-1760716623
+2025-10-17 21:27:05,716 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 21:27:05] "POST /api-endpoint HTTP/1.1" 200 -
+2025-10-17 21:27:05,716 - __main__ - INFO - Generating app code using LLM...
+2025-10-17 21:27:05,716 - llm_generator - INFO - Generating app for: test-app-1760716623
+2025-10-17 21:27:05,716 - llm_generator - ERROR - OpenAI API error: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-10-17 21:27:05,728 - __main__ - INFO - Creating GitHub repo: test-app-1760716623
+2025-10-17 21:27:05,732 - github_manager - INFO - Created temp directory: C:\Users\OM\AppData\Local\Temp\tmprs_nettu
+2025-10-17 21:27:09,142 - github_manager - INFO - Created repo: https://github.com/witchertech/test-app-1760716623
+2025-10-17 21:27:09,318 - github_manager - INFO - Wrote file: index.html
+2025-10-17 21:27:09,318 - github_manager - INFO - Added MIT LICENSE
+2025-10-17 21:27:09,318 - github_manager - INFO - Created README.md
+2025-10-17 21:27:11,836 - github_manager - INFO - Pushed commit: ab3201bf89d487b26891b9437bf52a2013ac4a92
+2025-10-17 21:27:11,837 - github_manager - INFO - Attempting to enable GitHub Pages...
+2025-10-17 21:27:12,822 - github_manager - INFO - GitHub Pages enabled successfully!
+2025-10-17 21:27:12,827 - github_manager - INFO - Waiting for GitHub Pages to be ready...
+2025-10-17 21:27:12,829 - github_manager - INFO - Note: GitHub Pages can take 2-5 minutes to build
+2025-10-17 21:27:52,955 - github_manager - INFO - Successfully completed! Repo: https://github.com/witchertech/test-app-1760716623
+2025-10-17 21:27:52,984 - __main__ - INFO - Repo created: https://github.com/witchertech/test-app-1760716623
+2025-10-17 21:27:52,985 - __main__ - INFO - Commit SHA: ab3201bf89d487b26891b9437bf52a2013ac4a92
+2025-10-17 21:27:52,985 - __main__ - INFO - Pages URL: https://witchertech.github.io/test-app-1760716623/
+2025-10-17 21:27:52,985 - __main__ - INFO - Submitting evaluation to: https://httpbin.org/post
+2025-10-17 21:27:52,985 - evaluator - INFO - Submitting evaluation (attempt 1/5)
+2025-10-17 21:27:54,397 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 21:27:54,397 - evaluator - INFO - Retrying in 1 seconds...
+2025-10-17 21:27:55,412 - evaluator - INFO - Submitting evaluation (attempt 2/5)
+2025-10-17 21:27:56,979 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 21:27:56,981 - evaluator - INFO - Retrying in 2 seconds...
+2025-10-17 21:27:58,985 - evaluator - INFO - Submitting evaluation (attempt 3/5)
+2025-10-17 21:28:00,812 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 21:28:00,812 - evaluator - INFO - Retrying in 4 seconds...
+2025-10-17 21:28:04,826 - evaluator - INFO - Submitting evaluation (attempt 4/5)
+2025-10-17 21:28:06,742 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 21:28:06,746 - evaluator - INFO - Retrying in 8 seconds...
+2025-10-17 21:28:14,756 - evaluator - INFO - Submitting evaluation (attempt 5/5)
+2025-10-17 21:28:16,515 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 21:28:16,515 - evaluator - ERROR - Failed to submit evaluation after all retries
+2025-10-17 21:28:16,516 - __main__ - ERROR - Failed to submit evaluation for task: test-app-1760716623

@@ -1,0 +1,15 @@
+Component,File,Purpose,Key Features
+Main API,app.py,Flask web server,"Endpoint handling, async processing, health check"
+Configuration,config.py,Environment management,"Validation, settings loading"
+GitHub Integration,github_manager.py,Repo operations,"Create repo, push code, enable Pages"
+LLM Generation,llm_generator.py,Code generation,"OpenAI/Anthropic integration, fallback"
+Evaluation,evaluator.py,Result submission,Exponential backoff retry logic
+Dependencies,requirements.txt,Python packages,"Flask, PyGithub, requests, openai"
+Environment,.env.example,Config template,All required environment variables
+Git Ignore,.gitignore,Git exclusions,"Secrets, logs, cache files"
+Documentation,README.md,Main documentation,Complete setup and usage guide
+Quick Start,QUICKSTART.md,Fast setup guide,Minimal steps to get running
+Deployment,DEPLOYMENT.md,Deploy guide,"Railway, Heroku, Render, VPS"
+Testing,test_api.py,Test script,"Health check, API endpoint testing"
+Startup,run.sh,Launch script,Automated setup and start
+Container,Dockerfile,Docker image,Production containerization
