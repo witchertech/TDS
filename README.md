@@ -1,3 +1,4 @@
+[![CI](https://github.com/witchertech/TDS/actions/workflows/ci.yml/badge.svg)](https://github.com/witchertech/TDS/actions/workflows/ci.yml)
 # LLM Code Deployment API Endpoint
 
 A production-ready API endpoint that receives project requests, generates web applications using LLMs, creates GitHub repositories, and submits evaluations automatically.
