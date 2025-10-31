@@ -145,3 +145,78 @@ AttributeError: 'Repository' object has no attribute 'create_pages_site'
 
 2025-10-17 21:28:16,515 - evaluator - ERROR - Failed to submit evaluation after all retries
 2025-10-17 21:28:16,516 - __main__ - ERROR - Failed to submit evaluation for task: test-app-1760716623
+2025-10-17 23:04:29,109 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.250.165.150:5000
+2025-10-17 23:04:29,109 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-17 23:05:22,935 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 23:05:22] "GET /health HTTP/1.1" 200 -
+2025-10-17 23:05:25,001 - __main__ - INFO - Received request for task: test-app-1760722522
+2025-10-17 23:05:25,003 - __main__ - INFO - Starting async processing for task: test-app-1760722522
+2025-10-17 23:05:25,005 - werkzeug - INFO - 127.0.0.1 - - [17/Oct/2025 23:05:25] "POST /api-endpoint HTTP/1.1" 200 -
+2025-10-17 23:05:25,006 - __main__ - INFO - Generating app code using LLM...
+2025-10-17 23:05:25,007 - llm_generator - INFO - Generating app for: test-app-1760722522
+2025-10-17 23:05:25,008 - llm_generator - ERROR - OpenAI API error: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-10-17 23:05:25,008 - __main__ - INFO - Creating GitHub repo: test-app-1760722522
+2025-10-17 23:05:25,017 - github_manager - INFO - Created temp directory: C:\Users\OM\AppData\Local\Temp\tmpvi9be1d6
+2025-10-17 23:05:28,331 - github_manager - INFO - Created repo: https://github.com/witchertech/test-app-1760722522
+2025-10-17 23:05:29,292 - github_manager - INFO - Wrote file: index.html
+2025-10-17 23:05:29,294 - github_manager - INFO - Added MIT LICENSE
+2025-10-17 23:05:29,297 - github_manager - INFO - Created README.md
+2025-10-17 23:05:33,180 - github_manager - INFO - Pushed commit: 14c5cd85c1e8fe5411ab31d677f7adee7d6230ec
+2025-10-17 23:05:33,181 - github_manager - INFO - Attempting to enable GitHub Pages...
+2025-10-17 23:05:34,218 - github_manager - INFO - GitHub Pages enabled successfully!
+2025-10-17 23:05:34,221 - github_manager - INFO - Waiting for GitHub Pages to be ready...
+2025-10-17 23:05:34,221 - github_manager - INFO - Note: GitHub Pages can take 2-5 minutes to build
+2025-10-17 23:06:04,376 - github_manager - INFO - Still waiting... (30s elapsed)
+2025-10-17 23:06:22,299 - github_manager - INFO - Successfully completed! Repo: https://github.com/witchertech/test-app-1760722522
+2025-10-17 23:06:22,377 - __main__ - INFO - Repo created: https://github.com/witchertech/test-app-1760722522
+2025-10-17 23:06:22,379 - __main__ - INFO - Commit SHA: 14c5cd85c1e8fe5411ab31d677f7adee7d6230ec
+2025-10-17 23:06:22,379 - __main__ - INFO - Pages URL: https://witchertech.github.io/test-app-1760722522/
+2025-10-17 23:06:22,379 - __main__ - INFO - Submitting evaluation to: https://httpbin.org/post
+2025-10-17 23:06:22,380 - evaluator - INFO - Submitting evaluation (attempt 1/5)
+2025-10-17 23:06:23,856 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 23:06:23,857 - evaluator - INFO - Retrying in 1 seconds...
+2025-10-17 23:06:24,869 - evaluator - INFO - Submitting evaluation (attempt 2/5)
+2025-10-17 23:06:26,240 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 23:06:26,242 - evaluator - INFO - Retrying in 2 seconds...
+2025-10-17 23:06:28,253 - evaluator - INFO - Submitting evaluation (attempt 3/5)
+2025-10-17 23:06:29,643 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 23:06:29,648 - evaluator - INFO - Retrying in 4 seconds...
+2025-10-17 23:06:33,663 - evaluator - INFO - Submitting evaluation (attempt 4/5)
+2025-10-17 23:06:35,119 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 23:06:35,122 - evaluator - INFO - Retrying in 8 seconds...
+2025-10-17 23:06:43,135 - evaluator - INFO - Submitting evaluation (attempt 5/5)
+2025-10-17 23:06:44,668 - evaluator - WARNING - Evaluation submission failed: 503 - <html>
+<head><title>503 Service Temporarily Unavailable</title></head>
+<body>
+<center><h1>503 Service Temporarily Unavailable</h1></center>
+</body>
+</html>
+
+2025-10-17 23:06:44,669 - evaluator - ERROR - Failed to submit evaluation after all retries
+2025-10-17 23:06:44,671 - __main__ - ERROR - Failed to submit evaluation for task: test-app-1760722522
