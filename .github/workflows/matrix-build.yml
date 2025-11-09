@@ -1,0 +1,51 @@
+name: Matrix Build with Artifacts
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (${{ matrix.os }} | py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.9', '3.10', '3.11']  # 3×3 = 9 parallel variants
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: matrix-8a5aec7
+        run: |
+          echo "Building for ${{ matrix.os }} with Python ${{ matrix.python-version }}"
+
+      - name: Generate build artifact
+        shell: bash
+        run: |
+          mkdir -p dist
+          cat <<EOF > dist/artifact.txt
+          Repo: $GITHUB_REPOSITORY
+          SHA: $GITHUB_SHA
+          Run ID: $GITHUB_RUN_ID
+          OS: ${{ matrix.os }}
+          Python: ${{ matrix.python-version }}
+          Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          Note: non-empty file to satisfy validation.
+          EOF
+          # Verify non-empty
+          test -s dist/artifact.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-8a5aec7-${{ matrix.os }}-py${{ matrix.python-version }}
+          path: dist/artifact.txt
+          if-no-files-found: error
